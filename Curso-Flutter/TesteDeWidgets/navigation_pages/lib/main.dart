@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:navigation_pages/one_page.dart';
+import 'two_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,11 @@ class MyApp extends StatelessWidget {
         
         primarySwatch: Colors.blue,
       ),
-      home: const OnePage(),
+      initialRoute: '/',
+      routes: {
+        '/':(_) => const OnePage(),
+        '/twoPage':(_) => const TwoPage(),
+      },
     );
   }
 }
